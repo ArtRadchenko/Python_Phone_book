@@ -12,9 +12,9 @@
 ![Просмотр телефонного справочника](https://github.com/ArtRadchenko/Python_Phone_book/blob/master/Screenshots/002.jpg?raw=true)
 
 # Структура репозитория
-*Screenshots* - папка со скриншотами.
+*Screenshots* - папка со скриншотами.  
 *.gitignore* - исключения для GIT.  
 *functions.py* - вспомогательные функции программы.  
 *main.py* - основная функция программы.  
-*phone_book.json* - пример созданного хранилища записей.
-*readme.md* - файл описания в формате markdown.
+*phone_book.json* - пример созданного хранилища записей.  
+*readme.md* - файл описания в формате markdown.  
