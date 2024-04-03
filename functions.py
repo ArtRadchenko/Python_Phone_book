@@ -26,9 +26,12 @@ def import_phone_book(file_name):
         print("Указанный файл не найден.")
 
 # Добавление нового контакта в телефонную книгу
-def add_contact(name, number, email):
+def add_contact(name, number, email, extra_number=None):
     phone_book = load_phone_book()
-    phone_book[name] = {'номер': number, 'email': email}
+    contact_info = {'номер': number, 'email': email}
+    if extra_number:
+        contact_info['доп_номер'] = extra_number
+    phone_book[name] = contact_info
     save_phone_book(phone_book)
 
 # Просмотр контактов в телефонной книге
@@ -36,7 +39,7 @@ def view_contacts():
     phone_book = load_phone_book()
     if phone_book:
         for name, contact in phone_book.items():
-            print(f'Имя: {name}, Номер: {contact["номер"]}, Email: {contact["email"]}')
+            print(f'Имя: {name}, Номер: {contact["номер"]}, Доп. номер: {contact.get("доп_номер", "нет")}, Email: {contact["email"]}')
     else:
         print('Телефонная книга пуста.')
 

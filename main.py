@@ -1,5 +1,5 @@
 # Основная функция программы
-from functions import add_contact, view_contacts, search_contact, delete_contact, update_contact, import_phone_book
+from functions import *
 
 def main():
     while True:
@@ -19,8 +19,9 @@ def main():
         elif choice == '2':
             name = input("Введите имя: ")
             number = input("Введите номер: ")
+            extra_number = input("Введите доп.номер (если есть): ")
             email = input("Введите email: ")
-            add_contact(name, number, email)
+            add_contact(name, number, email, extra_number)
         elif choice == '3':
             name = input("Введите имя для поиска: ")
             search_contact(name)
